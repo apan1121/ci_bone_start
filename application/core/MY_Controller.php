@@ -1,15 +1,29 @@
 <?php
+require_once(APPPATH.'libraries/sessionService/GuestSession.php');
+require_once(APPPATH.'libraries/sessionService/MemberSession.php');
+
 class MY_Controller extends CI_Controller
 {
     private $jsVars = array();
     private $resourcePath = "";
 
-    public $gooseProfile;
     public $guestSession;
     public $gooseSession;
 
     public function __construct(){
         parent::__construct();
+
+        /**
+         * 訪客 Sesison
+         * @var GuestSession
+         */
+        $this->guestSession = new GuestSession();
+
+        /**
+         * 會員 Session
+         * @var MemberSession
+         */
+        $this->memberSession = new MemberSession();
 
         $version = "";
         switch( ENVIRONMENT ){

@@ -36,8 +36,11 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
-const WEB_TITLE = "Demo Template";//" 管理系統通";
-const WEB_TITLE_LITE = "Demo";//" 管理系統通";
+
+const SESSION_PREFIX = "DEMO_WEB";
+
+const WEB_TITLE = "Demo Template";//"網站完整名稱";
+const WEB_TITLE_LITE = "Demo";//"網站簡稱";
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
